@@ -1,0 +1,5 @@
+{
+  "source_repo": "interflownex/All-in-One",
+  "source_ref": "governance/arkhe-publication-boundary-20260816",
+  "rule": "public allowlist only; no private automatic sync"
+}

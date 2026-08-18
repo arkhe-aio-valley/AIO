@@ -1,0 +1,15 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "arkhe-aio-public",
+  "compatibility_date": "2026-08-17",
+  "workers_dev": false,
+  "assets": {
+    "directory": "./public"
+  },
+  "routes": [
+    {
+      "pattern": "brasildesconto.com",
+      "custom_domain": true
+    }
+  ]
+}
