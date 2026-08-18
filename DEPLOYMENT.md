@@ -11,8 +11,9 @@ A autenticação deve existir fora do Git, por exemplo via sessão do Wrangler o
 ## Comando
 
 ```bash
-npm install
+npm ci
+npm run check
 npm run deploy
 ```
 
-Antes do deploy, execute a validação da raiz do pacote ARKHE | AIO.
+`npm run check` executa `wrangler deploy --dry-run`: valida a configuração e os assets sem publicar na Cloudflare.
