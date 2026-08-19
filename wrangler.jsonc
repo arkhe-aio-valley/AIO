@@ -8,7 +8,7 @@
   },
   "routes": [
     {
-      "pattern": "brasildesconto.com",
+      "pattern": "brasildesconto.com.br",
       "custom_domain": true
     }
   ]
