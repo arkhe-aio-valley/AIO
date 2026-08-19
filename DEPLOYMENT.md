@@ -1,6 +1,6 @@
 # Deploy do AIO
 
-Destino: `https://brasildesconto.com`
+Destino: `https://brasildesconto.com.br`
 
 A publicação usa **Cloudflare Workers Static Assets** e Custom Domain.
 
