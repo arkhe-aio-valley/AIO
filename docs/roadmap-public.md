@@ -9,7 +9,7 @@
 
 ## Site público
 
-[brasildesconto.com](https://brasildesconto.com/)
+[brasildesconto.com.br](https://brasildesconto.com.br/)
 
 ## Direções atuais
 
