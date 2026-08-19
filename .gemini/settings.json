@@ -1,0 +1,20 @@
+{
+  "general": {
+    "defaultApprovalMode": "auto_edit"
+  },
+  "billing": {
+    "overageStrategy": "never"
+  },
+  "agents": {
+    "browser": {
+      "confirmSensitiveActions": false,
+      "blockFileUploads": false
+    }
+  },
+  "context": {
+    "fileName": [
+      "AGENTS.md",
+      "GEMINI.md"
+    ]
+  }
+}
