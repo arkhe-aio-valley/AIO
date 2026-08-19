@@ -21,7 +21,7 @@ O **AIO** propõe outra direção:
 
 ### Site público
 
-[brasildesconto.com](https://brasildesconto.com/)
+[brasildesconto.com.br](https://brasildesconto.com.br/)
 
 ### Vídeo institucional
 
@@ -479,7 +479,7 @@ Não queremos entregar dezenas de ferramentas para uma empresa que precisa de ci
 
 ### Site público
 
-[brasildesconto.com](https://brasildesconto.com/)
+[brasildesconto.com.br](https://brasildesconto.com.br/)
 
 ## Documentação pública
 
