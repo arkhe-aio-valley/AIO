@@ -1,5 +1,7 @@
 # Roadmap público
 
+[Acessar o projeto](https://brasildesconto.com/)
+
 O roadmap público descreve capacidades e direção de produto sem expor cronogramas internos, fornecedores, custos, dependências comerciais ou critérios privados de liberação.
 
 ## Fundação
@@ -7,7 +9,7 @@ O roadmap público descreve capacidades e direção de produto sem expor cronogr
 - governança público/privado;
 - identidade e segurança;
 - documentação e narrativa pública;
-- superfície pública em `brasildesconto.com`.
+- superfície pública em [brasildesconto.com](https://brasildesconto.com/).
 
 ## Produto
 
