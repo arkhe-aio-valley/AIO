@@ -1,5 +1,7 @@
 # Roadmap público
 
+[Acessar o projeto](https://brasildesconto.com/)
+
 ## Direções atuais
 
 - Consolidar identidade e navegação entre experiências.
