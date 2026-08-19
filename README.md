@@ -12,7 +12,16 @@ O **AIO** propõe outra direção:
 
 > **Uma identidade para a pessoa. Uma estrutura adaptável para a empresa. Um ecossistema capaz de conectar comércio, serviços, trabalho, relacionamento e logística.**
 
-### [Acessar o projeto](https://brasildesconto.com/)
+### Projetos no GitHub
+
+- [Projeto 1](https://github.com/users/arkhe-aio-valley/projects/1/views/1)
+- [Projeto 2](https://github.com/users/arkhe-aio-valley/projects/2/views/1)
+- [Projeto 3](https://github.com/users/arkhe-aio-valley/projects/3/views/1)
+- [Projeto 4](https://github.com/users/arkhe-aio-valley/projects/4/views/1)
+
+### Site público
+
+[brasildesconto.com](https://brasildesconto.com/)
 
 ### Vídeo institucional
 
@@ -461,7 +470,16 @@ Não queremos entregar dezenas de ferramentas para uma empresa que precisa de ci
 
 ## Acesse
 
-### [Conheça o projeto](https://brasildesconto.com/)
+### Projetos no GitHub
+
+- [Projeto 1](https://github.com/users/arkhe-aio-valley/projects/1/views/1)
+- [Projeto 2](https://github.com/users/arkhe-aio-valley/projects/2/views/1)
+- [Projeto 3](https://github.com/users/arkhe-aio-valley/projects/3/views/1)
+- [Projeto 4](https://github.com/users/arkhe-aio-valley/projects/4/views/1)
+
+### Site público
+
+[brasildesconto.com](https://brasildesconto.com/)
 
 ## Documentação pública
 
