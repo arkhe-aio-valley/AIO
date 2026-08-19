@@ -9,7 +9,7 @@
 
 ## Site público
 
-[brasildesconto.com](https://brasildesconto.com/)
+[brasildesconto.com.br](https://brasildesconto.com.br/)
 
 O roadmap público descreve capacidades e direção de produto sem expor cronogramas internos, fornecedores, custos, dependências comerciais ou critérios privados de liberação.
 
@@ -18,7 +18,7 @@ O roadmap público descreve capacidades e direção de produto sem expor cronogr
 - governança público/privado;
 - identidade e segurança;
 - documentação e narrativa pública;
-- superfície pública em [brasildesconto.com](https://brasildesconto.com/).
+- superfície pública em [brasildesconto.com.br](https://brasildesconto.com.br/).
 
 ## Produto
 
