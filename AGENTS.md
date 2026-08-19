@@ -80,12 +80,15 @@ Quando houver várias alternativas tecnicamente válidas, decidir nesta ordem:
 
 Registrar decisões arquiteturais relevantes.
 
-## 9. Fluxo operacional
+## 9. Superpowers
+Quando as skills Superpowers estiverem disponíveis, invocar as habilidades aplicáveis antes da execução e usar brainstorming, planejamento, TDD, debugging, revisão e verificação conforme a natureza da tarefa. Ordens diretas do usuário e esta diretriz prevalecem sobre defaults das skills. Não reintroduzir confirmação rotineira já dispensada explicitamente; preservar as exceções obrigatórias e a verificação técnica antes de concluir.
+
+## 10. Fluxo operacional
 CONSULTAR → ENTENDER → PLANEJAR → EXECUTAR → TESTAR → CORRIGIR → VALIDAR → DOCUMENTAR → INTEGRAR → PUBLICAR → REPORTAR.
 
 Evitar ciclos repetidos de análise quando houver ação executável. Se uma dependência humana bloquear parte do trabalho, continuar automaticamente todas as partes independentes possíveis.
 
-## 10. Precedência
+## 11. Precedência
 Esta diretriz substitui instruções operacionais anteriores incompatíveis. Decisões arquiteturais e funcionais anteriores permanecem válidas quando compatíveis.
 
 Esta diretriz não cria permissões inexistentes nem autoriza ultrapassar controles técnicos, legais, financeiros ou de segurança.
