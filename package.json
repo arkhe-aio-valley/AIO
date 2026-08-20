@@ -4,9 +4,10 @@
   "version": "0.1.0",
   "scripts": {
     "validate:deploy-config": "node scripts/validate-cloudflare-config.mjs",
-    "deploy": "npm run validate:deploy-config && wrangler deploy",
+    "validate:public-surface": "node scripts/validate-public-surface.mjs",
+    "deploy": "npm run validate:deploy-config && npm run validate:public-surface && wrangler deploy",
     "dev": "wrangler dev",
-    "check": "npm run validate:deploy-config && wrangler deploy --dry-run"
+    "check": "npm run validate:deploy-config && npm run validate:public-surface && wrangler deploy --dry-run"
   },
   "devDependencies": {
     "wrangler": "^4.0.0"
