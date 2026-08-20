@@ -9,6 +9,10 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: production-health-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   verify-production:
     runs-on: ubuntu-latest
