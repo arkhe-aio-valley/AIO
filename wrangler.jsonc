@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
-  "name": "arkhe-aio-public",
+  "name": "aio",
   "compatibility_date": "2026-08-17",
   "workers_dev": false,
   "assets": {
@@ -8,8 +8,8 @@
   },
   "routes": [
     {
-      "pattern": "brasildesconto.com.br",
-      "custom_domain": true
+      "pattern": "brasildesconto.com.br/*",
+      "zone_name": "brasildesconto.com.br"
     }
   ]
 }
