@@ -1,0 +1,97 @@
+name: Production Health
+
+on:
+  pull_request:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  verify-production:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Verify deployed ARKHE public surface
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          health_url="https://brasildesconto.com.br/.well-known/arkhe-health.json"
+          home_url="https://brasildesconto.com.br/"
+
+          for attempt in $(seq 1 18); do
+            nonce="${GITHUB_SHA}-${attempt}"
+            health_ok=0
+            home_ok=0
+
+            if curl --fail --silent --show-error --location \
+              --connect-timeout 10 --max-time 20 \
+              -H 'Cache-Control: no-cache' \
+              "${health_url}?verify=${nonce}" \
+              --output /tmp/arkhe-health.json; then
+              if python3 - <<'PY'
+import json
+from pathlib import Path
+
+expected = {
+    "service": "ARKHE | AIO",
+    "status": "ok",
+    "environment": "production",
+    "canonical_host": "brasildesconto.com.br",
+    "source": "arkhe-aio-valley/AIO",
+}
+
+try:
+    actual = json.loads(Path("/tmp/arkhe-health.json").read_text(encoding="utf-8"))
+except Exception as error:
+    print(f"Invalid health payload: {error}")
+    raise SystemExit(1)
+
+mismatches = {
+    key: {"expected": value, "actual": actual.get(key)}
+    for key, value in expected.items()
+    if actual.get(key) != value
+}
+
+if mismatches:
+    print(f"Health contract mismatch: {mismatches}")
+    raise SystemExit(1)
+PY
+              then
+                health_ok=1
+              fi
+            fi
+
+            if curl --fail --silent --show-error --location \
+              --connect-timeout 10 --max-time 20 \
+              -H 'Cache-Control: no-cache' \
+              "${home_url}?verify=${nonce}" \
+              --output /tmp/arkhe-home.html; then
+              if grep -Fq '<title>ARKHE | AIO</title>' /tmp/arkhe-home.html \
+                && ! grep -Eiq 'tmp-valley' /tmp/arkhe-home.html; then
+                home_ok=1
+              fi
+            fi
+
+            if [[ "$health_ok" -eq 1 && "$home_ok" -eq 1 ]]; then
+              echo "Production ARKHE | AIO surface verified."
+              exit 0
+            fi
+
+            echo "Attempt ${attempt}/18: production not canonical yet; retrying."
+            sleep 10
+          done
+
+          echo "::error::Production did not converge to the canonical ARKHE | AIO surface."
+          if [[ -f /tmp/arkhe-health.json ]]; then
+            echo "Last health payload:"
+            cat /tmp/arkhe-health.json
+          fi
+          if [[ -f /tmp/arkhe-home.html ]]; then
+            echo "Last observed title:"
+            grep -ioE '<title>[^<]*</title>' /tmp/arkhe-home.html || true
+          fi
+          exit 1
