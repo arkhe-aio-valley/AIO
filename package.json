@@ -3,9 +3,10 @@
   "private": true,
   "version": "0.1.0",
   "scripts": {
-    "deploy": "wrangler deploy",
+    "validate:deploy-config": "node scripts/validate-cloudflare-config.mjs",
+    "deploy": "npm run validate:deploy-config && wrangler deploy",
     "dev": "wrangler dev",
-    "check": "wrangler deploy --dry-run"
+    "check": "npm run validate:deploy-config && wrangler deploy --dry-run"
   },
   "devDependencies": {
     "wrangler": "^4.0.0"
