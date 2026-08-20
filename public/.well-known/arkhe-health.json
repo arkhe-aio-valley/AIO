@@ -1,0 +1,7 @@
+{
+  "service": "ARKHE | AIO",
+  "status": "ok",
+  "environment": "production",
+  "canonical_host": "brasildesconto.com.br",
+  "source": "arkhe-aio-valley/AIO"
+}
