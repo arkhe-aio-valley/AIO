@@ -37,33 +37,33 @@ jobs:
               "${health_url}?verify=${nonce}" \
               --output /tmp/arkhe-health.json; then
               if python3 - <<'PY'
-import json
-from pathlib import Path
+          import json
+          from pathlib import Path
 
-expected = {
-    "service": "ARKHE | AIO",
-    "status": "ok",
-    "environment": "production",
-    "canonical_host": "brasildesconto.com.br",
-    "source": "arkhe-aio-valley/AIO",
-}
+          expected = {
+              "service": "ARKHE | AIO",
+              "status": "ok",
+              "environment": "production",
+              "canonical_host": "brasildesconto.com.br",
+              "source": "arkhe-aio-valley/AIO",
+          }
 
-try:
-    actual = json.loads(Path("/tmp/arkhe-health.json").read_text(encoding="utf-8"))
-except Exception as error:
-    print(f"Invalid health payload: {error}")
-    raise SystemExit(1)
+          try:
+              actual = json.loads(Path("/tmp/arkhe-health.json").read_text(encoding="utf-8"))
+          except Exception as error:
+              print(f"Invalid health payload: {error}")
+              raise SystemExit(1)
 
-mismatches = {
-    key: {"expected": value, "actual": actual.get(key)}
-    for key, value in expected.items()
-    if actual.get(key) != value
-}
+          mismatches = {
+              key: {"expected": value, "actual": actual.get(key)}
+              for key, value in expected.items()
+              if actual.get(key) != value
+          }
 
-if mismatches:
-    print(f"Health contract mismatch: {mismatches}")
-    raise SystemExit(1)
-PY
+          if mismatches:
+              print(f"Health contract mismatch: {mismatches}")
+              raise SystemExit(1)
+          PY
               then
                 health_ok=1
               fi
